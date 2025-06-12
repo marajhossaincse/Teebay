@@ -12,29 +12,17 @@ struct LoginScreen: View {
     @State var password: String
     
     var body: some View {
-        VStack(spacing: 40) {
+        VStack(spacing: 28) {
             Spacer()
             
             Text("SIGN IN")
                 .font(.title)
             
             TextField("Email", text: $email)
-                .padding(10)
-                .background(Color.white)
-                .overlay(
-                    Rectangle()
-                        .stroke(Color.gray, lineWidth: 1)
-                )
-                .foregroundColor(.gray)
+                .textFieldStyle()
                 
             TextField("Password", text: $password)
-                .padding(10)
-                .background(Color.white)
-                .overlay(
-                    Rectangle()
-                        .stroke(Color.gray, lineWidth: 1)
-                )
-                .foregroundColor(.gray)
+                .textFieldStyle()
             
             Button {} label: {
                 Text("LOGIN")
@@ -47,15 +35,13 @@ struct LoginScreen: View {
     
             Spacer()
         }
-        .padding(40)
+        .padding(.horizontal, 40)
     }
 }
 
-struct LoginScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginScreen(
-            email: "",
-            password: ""
-        )
-    }
+#Preview {
+    LoginScreen(
+        email: "",
+        password: ""
+    )
 }
