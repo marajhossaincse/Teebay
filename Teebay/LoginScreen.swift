@@ -18,13 +18,18 @@ struct LoginScreen: View {
             Spacer()
             
             TextField("Email", text: $email)
-            
+                .padding()
+                
             TextField("Password", text: $password)
+                .padding()
             
             Button {} label: {
                 Text("LOGIN")
-                    
             }
+            .padding()
+            .background(Color.green)
+            .foregroundColor(.white)
+            .cornerRadius(20)
         }
     }
 }
