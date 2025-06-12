@@ -33,6 +33,8 @@ struct LoginScreen: View {
                 .background(Color.purple)
                 .foregroundColor(.white)
                 
+                BiometricItem()
+                
                 HStack {
                     Text("Don't have an account?")
                     
