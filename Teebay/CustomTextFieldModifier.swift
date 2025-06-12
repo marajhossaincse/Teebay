@@ -11,12 +11,14 @@ struct TextFieldBorderAndBackground: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(10) // Internal padding for the text
-            .background(Color.white) // White background
+            .foregroundColor(.black) // Text color set to gray
+            .background(.white) // White background
             .overlay(
                 Rectangle() // Use Rectangle for a sharp border
                     .stroke(Color.gray, lineWidth: 1) // Thin grey border
             )
-            .foregroundColor(.gray) // Text color set to gray
+            .autocorrectionDisabled(true) // Also disable autocorrection
+            .textInputAutocapitalization(.never) // This is the key to disable auto-capitalization
     }
 }
 

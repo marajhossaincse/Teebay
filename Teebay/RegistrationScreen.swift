@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct RegistrationScreen: View {
-    @State var firstName: String
-    @State var lastName: String
-    @State var address: String
-    @State var email: String
-    @State var phoneNumber: String
-    @State var password: String
-    @State var confirmPassword: String
+    @Environment(\.dismiss) var dismiss
+    
+    @State var firstName: String = ""
+    @State var lastName: String = ""
+    @State var address: String = ""
+    @State var email: String = ""
+    @State var phoneNumber: String = ""
+    @State var password: String = ""
+    @State var confirmPassword: String = ""
+    @State private var showSignInScreen = false
     
     var body: some View {
         VStack(spacing: 28) {
@@ -51,11 +54,20 @@ struct RegistrationScreen: View {
             .background(Color.purple)
             .foregroundColor(.white)
             
-            Text("Already have an account? Sign In")
+            HStack {
+                Text("Already have an account?")
+             
+                Button {
+                    dismiss()
+                } label: {
+                    Text("Sign In")
+                }
+            }
     
             Spacer()
         }
         .padding(.horizontal, 40)
+        .navigationBarBackButtonHidden()
     }
 }
 
