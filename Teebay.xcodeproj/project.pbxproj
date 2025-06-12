@@ -12,6 +12,8 @@
 		CE4D63412DF9E66C00280979 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D63402DF9E66C00280979 /* Assets.xcassets */; };
 		CE4D63442DF9E66C00280979 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D63432DF9E66C00280979 /* Preview Assets.xcassets */; };
 		CE4D634B2DF9E6B100280979 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D634A2DF9E6B100280979 /* LoginScreen.swift */; };
+		D9E723FD2DFAB1180015CC76 /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E723FC2DFAB1180015CC76 /* RegistrationScreen.swift */; };
+		D9E723FF2DFAB33B0015CC76 /* CustomTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E723FE2DFAB33B0015CC76 /* CustomTextFieldModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		CE4D63402DF9E66C00280979 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4D63432DF9E66C00280979 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE4D634A2DF9E6B100280979 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		D9E723FC2DFAB1180015CC76 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
+		D9E723FE2DFAB33B0015CC76 /* CustomTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				CE4D633C2DF9E66A00280979 /* TeebayApp.swift */,
 				CE4D633E2DF9E66A00280979 /* ContentView.swift */,
 				CE4D634A2DF9E6B100280979 /* LoginScreen.swift */,
+				D9E723FE2DFAB33B0015CC76 /* CustomTextFieldModifier.swift */,
+				D9E723FC2DFAB1180015CC76 /* RegistrationScreen.swift */,
 				CE4D63402DF9E66C00280979 /* Assets.xcassets */,
 				CE4D63422DF9E66C00280979 /* Preview Content */,
 			);
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4D633F2DF9E66A00280979 /* ContentView.swift in Sources */,
+				D9E723FF2DFAB33B0015CC76 /* CustomTextFieldModifier.swift in Sources */,
 				CE4D633D2DF9E66A00280979 /* TeebayApp.swift in Sources */,
+				D9E723FD2DFAB1180015CC76 /* RegistrationScreen.swift in Sources */,
 				CE4D634B2DF9E6B100280979 /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
