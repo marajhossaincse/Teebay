@@ -8,34 +8,48 @@
 import SwiftUI
 
 struct LoginScreen: View {
-    @State var email: String
-    @State var password: String
+    @State var email: String = ""
+    @State var password: String = ""
+    @State private var showRegistrationScreen = false
     
     var body: some View {
-        VStack(spacing: 28) {
-            Spacer()
-            
-            Text("SIGN IN")
-                .font(.title)
-            
-            TextField("Email", text: $email)
-                .textFieldStyle()
+        NavigationStack {
+            VStack(spacing: 28) {
+                Spacer()
                 
-            TextField("Password", text: $password)
-                .textFieldStyle()
-            
-            Button {} label: {
-                Text("LOGIN")
+                Text("SIGN IN")
+                    .font(.title)
+                
+                TextField("Email", text: $email)
+                    .textFieldStyle()
+                    
+                TextField("Password", text: $password)
+                    .textFieldStyle()
+                
+                Button {} label: {
+                    Text("LOGIN")
+                }
+                .padding()
+                .background(Color.purple)
+                .foregroundColor(.white)
+                
+                HStack {
+                    Text("Don't have an account?")
+                    
+                    Button {
+                        showRegistrationScreen = true
+                    } label: {
+                        Text("Sign Up")
+                    }
+                }
+        
+                Spacer()
             }
-            .padding()
-            .background(Color.purple)
-            .foregroundColor(.white)
-            
-            Text("Don't have an account? Signup")
-    
-            Spacer()
+            .padding(.horizontal, 40)
+            .navigationDestination(isPresented: $showRegistrationScreen) {
+                RegistrationScreen()
+            }
         }
-        .padding(.horizontal, 40)
     }
 }
 
