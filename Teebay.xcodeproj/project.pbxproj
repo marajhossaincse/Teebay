@@ -12,6 +12,7 @@
 		CE4D63412DF9E66C00280979 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D63402DF9E66C00280979 /* Assets.xcassets */; };
 		CE4D63442DF9E66C00280979 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D63432DF9E66C00280979 /* Preview Assets.xcassets */; };
 		CE4D634B2DF9E6B100280979 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D634A2DF9E6B100280979 /* LoginScreen.swift */; };
+		D919CD802E0149CC00F60824 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919CD7F2E0149CC00F60824 /* TitleScreen.swift */; };
 		D95CA2A02DFAE2F80050ACAD /* BiometricItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */; };
 		D976B1512E01466200E214E7 /* MyProductsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976B1502E01466100E214E7 /* MyProductsScreen.swift */; };
 		D9C1DCB92E0142B900D63AD7 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1DCB82E0142B900D63AD7 /* ProductCard.swift */; };
@@ -27,6 +28,7 @@
 		CE4D63402DF9E66C00280979 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4D63432DF9E66C00280979 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE4D634A2DF9E6B100280979 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		D919CD7F2E0149CC00F60824 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricItem.swift; sourceTree = "<group>"; };
 		D976B1502E01466100E214E7 /* MyProductsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsScreen.swift; sourceTree = "<group>"; };
 		D9C1DCB82E0142B900D63AD7 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
@@ -85,11 +87,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D919CD7E2E01499100F60824 /* Create Product */ = {
+			isa = PBXGroup;
+			children = (
+				D919CD7F2E0149CC00F60824 /* TitleScreen.swift */,
+			);
+			path = "Create Product";
+			sourceTree = "<group>";
+		};
 		D9C1DCB72E01429000D63AD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				D9C1DCB82E0142B900D63AD7 /* ProductCard.swift */,
 				D976B1502E01466100E214E7 /* MyProductsScreen.swift */,
+				D919CD7E2E01499100F60824 /* Create Product */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -186,6 +197,7 @@
 			files = (
 				CE4D633F2DF9E66A00280979 /* ContentView.swift in Sources */,
 				D9E723FF2DFAB33B0015CC76 /* CustomTextFieldModifier.swift in Sources */,
+				D919CD802E0149CC00F60824 /* TitleScreen.swift in Sources */,
 				D9ECAEE92DFAD7C500C1B65F /* BiometricAuthenticator.swift in Sources */,
 				D976B1512E01466200E214E7 /* MyProductsScreen.swift in Sources */,
 				CE4D633D2DF9E66A00280979 /* TeebayApp.swift in Sources */,

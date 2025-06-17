@@ -20,7 +20,9 @@ struct MyProductsScreen: View {
                 }
                 .padding(.bottom, 60)
 
-                Button {} label: {
+                Button {
+                    // navigate to create product screen
+                } label: {
                     Image(systemName: "plus.circle")
                         .resizable()
                         .frame(width: 50, height: 50)
