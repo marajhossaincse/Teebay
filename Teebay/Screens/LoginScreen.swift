@@ -23,7 +23,7 @@ struct LoginScreen: View {
                 TextField("Email", text: $email)
                     .textFieldStyle()
                     
-                TextField("Password", text: $password)
+                SecureField("Password", text: $password)
                     .textFieldStyle()
                 
                 Button {} label: {
