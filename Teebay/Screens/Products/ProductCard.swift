@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProductCard: View {
+struct ProductCard: View {    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Title")
