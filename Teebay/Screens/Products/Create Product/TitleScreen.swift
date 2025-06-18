@@ -25,15 +25,14 @@ struct TitleScreen: View {
                     )
                     .frame(maxWidth: .infinity)
             }
-            .padding(.bottom, 60)
+            .padding(.bottom, 80)
 
-            Button {
-                // navigate to select category screen
-            } label: {
-                Text("Next")
-                    .padding(8)
-                    .foregroundStyle(.white)
-                    .background(.purple)
+            NavigationLink(destination: CategoryScreen()) {
+                Text("NEXT")
+                    .font(.headline)
+                    .padding()
+                    .background(Color.purple)
+                    .foregroundColor(.white)
             }
         }
         .padding(.horizontal, 40)

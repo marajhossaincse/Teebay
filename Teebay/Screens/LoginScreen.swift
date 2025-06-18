@@ -26,12 +26,13 @@ struct LoginScreen: View {
                 SecureField("Password", text: $password)
                     .textFieldStyle()
                 
-                Button {} label: {
+                NavigationLink(destination: TitleScreen()) {
                     Text("LOGIN")
+                        .font(.headline)
+                        .padding()
+                        .background(Color.purple)
+                        .foregroundColor(.white)
                 }
-                .padding()
-                .background(Color.purple)
-                .foregroundColor(.white)
                 
                 BiometricItem()
                 
