@@ -25,21 +25,13 @@ struct CategoryScreen: View {
                 Button {
                     dismiss()
                 } label: {
-                    Text("BACK")
-                        .font(.headline)
-                        .padding()
-                        .foregroundStyle(.white)
-                        .background(.purple)
+                    CustomButtonView(name: "BACK")
                 }
 
                 Spacer()
 
                 NavigationLink(destination: DescriptionScreen()) {
-                    Text("NEXT")
-                        .font(.headline)
-                        .padding()
-                        .background(Color.purple)
-                        .foregroundColor(.white)
+                    CustomButtonView(name: "NEXT")
                 }
             }
         }
