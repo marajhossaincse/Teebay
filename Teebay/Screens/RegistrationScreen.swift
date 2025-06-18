@@ -41,10 +41,10 @@ struct RegistrationScreen: View {
             TextField("Phone Number", text: $phoneNumber)
                 .textFieldStyle()
             
-            TextField("Password", text: $password)
+            SecureField("Password", text: $password)
                 .textFieldStyle()
             
-            TextField("Confirm Password", text: $confirmPassword)
+            SecureField("Confirm Password", text: $confirmPassword)
                 .textFieldStyle()
             
             Button {} label: {
