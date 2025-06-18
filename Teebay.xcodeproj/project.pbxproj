@@ -15,6 +15,7 @@
 		D919CD802E0149CC00F60824 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919CD7F2E0149CC00F60824 /* TitleScreen.swift */; };
 		D95CA2A02DFAE2F80050ACAD /* BiometricItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */; };
 		D976B1512E01466200E214E7 /* MyProductsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976B1502E01466100E214E7 /* MyProductsScreen.swift */; };
+		D97EBF112E02DE3900244E79 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97EBF102E02DE3900244E79 /* PhotoPicker.swift */; };
 		D9B89F8B2E02CC4200232891 /* PriceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B89F8A2E02CC4200232891 /* PriceScreen.swift */; };
 		D9B89F8D2E02D08800232891 /* ProductSummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B89F8C2E02D08800232891 /* ProductSummaryScreen.swift */; };
 		D9B89F8F2E02D2C900232891 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B89F8E2E02D2C900232891 /* CustomButtonView.swift */; };
@@ -38,6 +39,7 @@
 		D919CD7F2E0149CC00F60824 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricItem.swift; sourceTree = "<group>"; };
 		D976B1502E01466100E214E7 /* MyProductsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsScreen.swift; sourceTree = "<group>"; };
+		D97EBF102E02DE3900244E79 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		D9B89F8A2E02CC4200232891 /* PriceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceScreen.swift; sourceTree = "<group>"; };
 		D9B89F8C2E02D08800232891 /* ProductSummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSummaryScreen.swift; sourceTree = "<group>"; };
 		D9B89F8E2E02D2C900232891 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */,
 				D9BB85D02E0172BC006B9AB5 /* SelectorView.swift */,
 				D9B89F8E2E02D2C900232891 /* CustomButtonView.swift */,
+				D97EBF102E02DE3900244E79 /* PhotoPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				CE4D633F2DF9E66A00280979 /* ContentView.swift in Sources */,
 				D9B89F8F2E02D2C900232891 /* CustomButtonView.swift in Sources */,
+				D97EBF112E02DE3900244E79 /* PhotoPicker.swift in Sources */,
 				D9B89F8B2E02CC4200232891 /* PriceScreen.swift in Sources */,
 				D9BB85D32E017DCB006B9AB5 /* DescriptionScreen.swift in Sources */,
 				D9E723FF2DFAB33B0015CC76 /* CustomTextFieldModifier.swift in Sources */,
@@ -368,7 +372,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Teebay/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"We need access to your camera to let you take pictures for your product listings.\"";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "\"We use Face ID to quickly and securely log you in.\"";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"We need access to your photo library to let you upload product images.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -401,7 +408,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Teebay/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"We need access to your camera to let you take pictures for your product listings.\"";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "\"We use Face ID to quickly and securely log you in.\"";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "\"We need access to your photo library to let you upload product images.\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
