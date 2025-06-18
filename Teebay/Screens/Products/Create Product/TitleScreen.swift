@@ -18,21 +18,12 @@ struct TitleScreen: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 TextField("", text: $title)
-                    .padding(10)
-                    .background(
-                        Rectangle()
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
-                    .frame(maxWidth: .infinity)
+                    .textFieldStyle()
             }
             .padding(.bottom, 80)
 
             NavigationLink(destination: CategoryScreen()) {
-                Text("NEXT")
-                    .font(.headline)
-                    .padding()
-                    .background(Color.purple)
-                    .foregroundColor(.white)
+                CustomButtonView(name: "NEXT")
             }
         }
         .padding(.horizontal, 40)

@@ -15,6 +15,9 @@
 		D919CD802E0149CC00F60824 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919CD7F2E0149CC00F60824 /* TitleScreen.swift */; };
 		D95CA2A02DFAE2F80050ACAD /* BiometricItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */; };
 		D976B1512E01466200E214E7 /* MyProductsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976B1502E01466100E214E7 /* MyProductsScreen.swift */; };
+		D9B89F8B2E02CC4200232891 /* PriceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B89F8A2E02CC4200232891 /* PriceScreen.swift */; };
+		D9B89F8D2E02D08800232891 /* ProductSummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B89F8C2E02D08800232891 /* ProductSummaryScreen.swift */; };
+		D9B89F8F2E02D2C900232891 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B89F8E2E02D2C900232891 /* CustomButtonView.swift */; };
 		D9BB85CF2E014D14006B9AB5 /* CategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB85CE2E014D14006B9AB5 /* CategoryScreen.swift */; };
 		D9BB85D12E0172BC006B9AB5 /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB85D02E0172BC006B9AB5 /* SelectorView.swift */; };
 		D9BB85D32E017DCB006B9AB5 /* DescriptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BB85D22E017DCB006B9AB5 /* DescriptionScreen.swift */; };
@@ -35,6 +38,9 @@
 		D919CD7F2E0149CC00F60824 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricItem.swift; sourceTree = "<group>"; };
 		D976B1502E01466100E214E7 /* MyProductsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsScreen.swift; sourceTree = "<group>"; };
+		D9B89F8A2E02CC4200232891 /* PriceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceScreen.swift; sourceTree = "<group>"; };
+		D9B89F8C2E02D08800232891 /* ProductSummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSummaryScreen.swift; sourceTree = "<group>"; };
+		D9B89F8E2E02D2C900232891 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		D9BB85CE2E014D14006B9AB5 /* CategoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScreen.swift; sourceTree = "<group>"; };
 		D9BB85D02E0172BC006B9AB5 /* SelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
 		D9BB85D22E017DCB006B9AB5 /* DescriptionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionScreen.swift; sourceTree = "<group>"; };
@@ -100,9 +106,10 @@
 			children = (
 				D919CD7F2E0149CC00F60824 /* TitleScreen.swift */,
 				D9BB85CE2E014D14006B9AB5 /* CategoryScreen.swift */,
-				D9BB85D02E0172BC006B9AB5 /* SelectorView.swift */,
 				D9BB85D22E017DCB006B9AB5 /* DescriptionScreen.swift */,
 				D9BB85D42E018DBA006B9AB5 /* PictureUploadScreen.swift */,
+				D9B89F8A2E02CC4200232891 /* PriceScreen.swift */,
+				D9B89F8C2E02D08800232891 /* ProductSummaryScreen.swift */,
 			);
 			path = "Create Product";
 			sourceTree = "<group>";
@@ -133,6 +140,8 @@
 				D9E723FE2DFAB33B0015CC76 /* CustomTextFieldModifier.swift */,
 				D9ECAEE82DFAD7C500C1B65F /* BiometricAuthenticator.swift */,
 				D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */,
+				D9BB85D02E0172BC006B9AB5 /* SelectorView.swift */,
+				D9B89F8E2E02D2C900232891 /* CustomButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -208,8 +217,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4D633F2DF9E66A00280979 /* ContentView.swift in Sources */,
+				D9B89F8F2E02D2C900232891 /* CustomButtonView.swift in Sources */,
+				D9B89F8B2E02CC4200232891 /* PriceScreen.swift in Sources */,
 				D9BB85D32E017DCB006B9AB5 /* DescriptionScreen.swift in Sources */,
 				D9E723FF2DFAB33B0015CC76 /* CustomTextFieldModifier.swift in Sources */,
+				D9B89F8D2E02D08800232891 /* ProductSummaryScreen.swift in Sources */,
 				D919CD802E0149CC00F60824 /* TitleScreen.swift in Sources */,
 				D9ECAEE92DFAD7C500C1B65F /* BiometricAuthenticator.swift in Sources */,
 				D976B1512E01466200E214E7 /* MyProductsScreen.swift in Sources */,

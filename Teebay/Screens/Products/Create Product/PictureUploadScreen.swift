@@ -11,50 +11,47 @@ struct PictureUploadScreen: View {
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
-//        ZStack(alignment: .bottomTrailing) {
-            VStack {
-                Button {} label: {
-                    Text("Take Picture using Camera")
-                        .font(.headline)
-                        .padding()
-                        .background(Color.purple)
-                        .foregroundColor(.white)
-                }
-
-                Button {} label: {
-                    Text("Upload Picture from Device")
-                        .font(.headline)
-                        .padding()
-                        .background(Color.purple)
-                        .foregroundColor(.white)
-                }
+        VStack(spacing: 32) {
+            Spacer()
+            
+            Button {} label: {
+                Text("Take Picture using Camera")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.purple)
+                    .cornerRadius(8)
             }
-//            .padding(.bottom, 80)
-
+            
+            Button {} label: {
+                Text("Upload Picture from Device")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.purple)
+                    .cornerRadius(8)
+            }
+            .padding(.bottom, 40)
+            
+            Spacer()
+            
             HStack {
                 Button {
                     dismiss()
                 } label: {
-                    Text("BACK")
-                        .font(.headline)
-                        .padding()
-                        .foregroundStyle(.white)
-                        .background(.purple)
+                    CustomButtonView(name: "BACK")
                 }
-
+                
                 Spacer()
-
-                NavigationLink(destination: DescriptionScreen()) {
-                    Text("NEXT")
-                        .font(.headline)
-                        .padding()
-                        .background(Color.purple)
-                        .foregroundColor(.white)
+                
+                NavigationLink(destination: PriceScreen()) {
+                    CustomButtonView(name: "NEXT")
                 }
             }
-            .padding()
-//        }
-//        .padding(.horizontal, 40)
+            
+            Spacer()
+        }
+        .padding(.horizontal, 40)
     }
 }
 

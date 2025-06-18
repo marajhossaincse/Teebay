@@ -18,25 +18,26 @@ struct DescriptionScreen: View {
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            TextField("", text: $description)
-                .frame(maxWidth: .infinity)
+            TextEditor(text: $description)
                 .frame(height: 200)
-                .border(Color.gray, width: 1.5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.gray, lineWidth: 1.5)
+                )
+                .padding(.vertical)
 
             HStack {
                 Button {
                     dismiss()
                 } label: {
-                    Text("BACK")
-                        .font(.headline)
-                        .padding()
-                        .foregroundStyle(.white)
-                        .background(.purple)
+                    CustomButtonView(name: "BACK")
                 }
 
                 Spacer()
 
-//                NavigationLink(destination:)
+                NavigationLink(destination: PictureUploadScreen()) {
+                    CustomButtonView(name: "NEXT")
+                }
             }
         }
         .padding(.horizontal, 40)
