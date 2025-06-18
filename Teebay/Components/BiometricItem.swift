@@ -45,7 +45,7 @@ struct BiometricItem: View {
             }
         }
         .onChange(of: authenticator.authenticationError) { newValue in
-            if newValue != nil { // If there's a new error
+            if newValue != nil {
                 showingLoginFailureAlert = true
             }
         }
