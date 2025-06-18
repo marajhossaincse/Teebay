@@ -10,19 +10,17 @@ import SwiftUI
 struct TextFieldBorderAndBackground: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(10) // Internal padding for the text
-            .foregroundColor(.black) // Text color set to gray
-            .background(.white) // White background
+            .padding(10)
+            .foregroundColor(.black)
+            .background(.white)
             .overlay(
-                Rectangle() // Use Rectangle for a sharp border
-                    .stroke(Color.gray, lineWidth: 1) // Thin grey border
+                Rectangle()
+                    .stroke(Color.gray, lineWidth: 1)
             )
-            .autocorrectionDisabled(true) // Also disable autocorrection
-            .textInputAutocapitalization(.never) // This is the key to disable auto-capitalization
+            .autocorrectionDisabled(true)
+            .textInputAutocapitalization(.never)
     }
 }
-
-// MARK: - Convenience Extension
 
 extension View {
     func textFieldStyle(isRounded: Bool = false) -> some View {
@@ -30,20 +28,19 @@ extension View {
             return self
                 .padding(10)
                 .background(Color.white)
-                .cornerRadius(8) // Apply cornerRadius to the background
+                .cornerRadius(8)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 8) // Match cornerRadius for the border
+                    RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.gray, lineWidth: 1)
                 )
                 .foregroundColor(.gray)
-                .eraseToAnyView() // Helper to return AnyView for conditional modifiers
+                .eraseToAnyView()
         } else {
             return self.modifier(TextFieldBorderAndBackground())
-                .eraseToAnyView() // Helper to return AnyView for conditional modifiers
+                .eraseToAnyView()
         }
     }
 
-    /// Helper to erase to AnyView for conditional modifiers
     fileprivate func eraseToAnyView() -> AnyView {
         AnyView(self)
     }
