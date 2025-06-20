@@ -13,6 +13,11 @@
 		CE4D63442DF9E66C00280979 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D63432DF9E66C00280979 /* Preview Assets.xcassets */; };
 		CE4D634B2DF9E6B100280979 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D634A2DF9E6B100280979 /* LoginScreen.swift */; };
 		D919CD802E0149CC00F60824 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919CD7F2E0149CC00F60824 /* TitleScreen.swift */; };
+		D95A03422E03520A0008732F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A03412E03520A0008732F /* User.swift */; };
+		D95A03452E03533D0008732F /* UserRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A03442E03533D0008732F /* UserRegistrationViewModel.swift */; };
+		D95A03482E0355740008732F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A03472E0355740008732F /* NetworkManager.swift */; };
+		D95A034A2E03559B0008732F /* RegistrationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A03492E03559B0008732F /* RegistrationAPI.swift */; };
+		D95A034C2E03565D0008732F /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A034B2E03565D0008732F /* Env.swift */; };
 		D95CA2A02DFAE2F80050ACAD /* BiometricItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */; };
 		D976B1512E01466200E214E7 /* MyProductsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976B1502E01466100E214E7 /* MyProductsScreen.swift */; };
 		D97EBF112E02DE3900244E79 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97EBF102E02DE3900244E79 /* PhotoPicker.swift */; };
@@ -37,6 +42,11 @@
 		CE4D63432DF9E66C00280979 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE4D634A2DF9E6B100280979 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		D919CD7F2E0149CC00F60824 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
+		D95A03412E03520A0008732F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D95A03442E03533D0008732F /* UserRegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationViewModel.swift; sourceTree = "<group>"; };
+		D95A03472E0355740008732F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D95A03492E03559B0008732F /* RegistrationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAPI.swift; sourceTree = "<group>"; };
+		D95A034B2E03565D0008732F /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricItem.swift; sourceTree = "<group>"; };
 		D976B1502E01466100E214E7 /* MyProductsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsScreen.swift; sourceTree = "<group>"; };
 		D97EBF102E02DE3900244E79 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
@@ -51,7 +61,7 @@
 		D9E723FC2DFAB1180015CC76 /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		D9E723FE2DFAB33B0015CC76 /* CustomTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldModifier.swift; sourceTree = "<group>"; };
 		D9ECAEE82DFAD7C500C1B65F /* BiometricAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthenticator.swift; sourceTree = "<group>"; };
-		D9ECAEEA2DFAD88000C1B65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D9ECAEEA2DFAD88000C1B65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +94,12 @@
 		CE4D633B2DF9E66A00280979 /* Teebay */ = {
 			isa = PBXGroup;
 			children = (
-				D9ECAEEA2DFAD88000C1B65F /* Info.plist */,
 				CE4D633C2DF9E66A00280979 /* TeebayApp.swift */,
 				CE4D633E2DF9E66A00280979 /* ContentView.swift */,
+				D9ECAEEA2DFAD88000C1B65F /* Info.plist */,
+				D95A03462E03555E0008732F /* Network */,
+				D95A03402E0351EA0008732F /* Models */,
+				D95A03432E0353230008732F /* ViewModels */,
 				D9ECAEE62DFAD77000C1B65F /* Screens */,
 				D9ECAEE72DFAD78300C1B65F /* Components */,
 				CE4D63402DF9E66C00280979 /* Assets.xcassets */,
@@ -114,6 +127,32 @@
 				D9B89F8C2E02D08800232891 /* ProductSummaryScreen.swift */,
 			);
 			path = "Create Product";
+			sourceTree = "<group>";
+		};
+		D95A03402E0351EA0008732F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D95A03412E03520A0008732F /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D95A03432E0353230008732F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D95A03442E03533D0008732F /* UserRegistrationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D95A03462E03555E0008732F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D95A03472E0355740008732F /* NetworkManager.swift */,
+				D95A03492E03559B0008732F /* RegistrationAPI.swift */,
+				D95A034B2E03565D0008732F /* Env.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		D9C1DCB72E01429000D63AD7 /* Products */ = {
@@ -219,9 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95A03452E03533D0008732F /* UserRegistrationViewModel.swift in Sources */,
+				D95A034C2E03565D0008732F /* Env.swift in Sources */,
 				CE4D633F2DF9E66A00280979 /* ContentView.swift in Sources */,
 				D9B89F8F2E02D2C900232891 /* CustomButtonView.swift in Sources */,
+				D95A03482E0355740008732F /* NetworkManager.swift in Sources */,
 				D97EBF112E02DE3900244E79 /* PhotoPicker.swift in Sources */,
+				D95A034A2E03559B0008732F /* RegistrationAPI.swift in Sources */,
 				D9B89F8B2E02CC4200232891 /* PriceScreen.swift in Sources */,
 				D9BB85D32E017DCB006B9AB5 /* DescriptionScreen.swift in Sources */,
 				D9E723FF2DFAB33B0015CC76 /* CustomTextFieldModifier.swift in Sources */,
@@ -237,6 +280,7 @@
 				CE4D634B2DF9E6B100280979 /* LoginScreen.swift in Sources */,
 				D95CA2A02DFAE2F80050ACAD /* BiometricItem.swift in Sources */,
 				D9C1DCB92E0142B900D63AD7 /* ProductCard.swift in Sources */,
+				D95A03422E03520A0008732F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +425,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,6 +462,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
