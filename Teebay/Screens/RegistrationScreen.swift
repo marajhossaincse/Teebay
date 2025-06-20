@@ -7,17 +7,14 @@
 
 import SwiftUI
 
+// add logic for matching passwords
+// keep submit button disabled until all fields are not filled
+// validate email
+
 struct RegistrationScreen: View {
     @Environment(\.dismiss) var dismiss
-    
-    @State var firstName: String = ""
-    @State var lastName: String = ""
-    @State var address: String = ""
-    @State var email: String = ""
-    @State var phoneNumber: String = ""
-    @State var password: String = ""
-    @State var confirmPassword: String = ""
-    @State private var showSignInScreen = false
+
+    @State private var viewModel: UserRegistrationViewModel = .init()
     
     var body: some View {
         VStack(spacing: 28) {
@@ -26,28 +23,30 @@ struct RegistrationScreen: View {
             Text("SIGN UP")
                 .font(.title)
             
-            TextField("First Name", text: $firstName)
+            TextField("First Name", text: $viewModel.firstName)
                 .textFieldStyle()
                 
-            TextField("Last Name", text: $lastName)
+            TextField("Last Name", text: $viewModel.lastName)
                 .textFieldStyle()
             
-            TextField("Address", text: $address)
+            TextField("Address", text: $viewModel.address)
                 .textFieldStyle()
             
-            TextField("Email", text: $email)
+            TextField("Email", text: $viewModel.email)
+                .textFieldStyle()
+                        
+            SecureField("Password", text: $viewModel.password)
                 .textFieldStyle()
             
-            TextField("Phone Number", text: $phoneNumber)
+            SecureField("Confirm Password", text: $viewModel.confirmPassword)
                 .textFieldStyle()
             
-            SecureField("Password", text: $password)
-                .textFieldStyle()
-            
-            SecureField("Confirm Password", text: $confirmPassword)
-                .textFieldStyle()
-            
-            Button {} label: {
+            Button {
+                Task {
+                    await viewModel.registerUser()
+                    print("Debug button hit")
+                }
+            } label: {
                 Text("REGISTER")
             }
             .padding()
@@ -71,14 +70,6 @@ struct RegistrationScreen: View {
     }
 }
 
-#Preview {
-    RegistrationScreen(
-        firstName: "",
-        lastName: "",
-        address: "",
-        email: "",
-        phoneNumber: "",
-        password: "",
-        confirmPassword: ""
-    )
-}
+// #Preview {
+//    RegistrationScreen()
+// }
