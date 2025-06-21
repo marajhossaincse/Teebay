@@ -10,10 +10,8 @@ import SwiftUI
 struct PriceScreen: View {
     @Environment(\.dismiss) var dismiss
 
-    @State var price: String = ""
-    @State var rentPrice: String  = ""
+    @Bindable var viewModel: ProductCreationViewModel
 
-    @State private var selectedRentalOption = "per hour"
     var rentalOptions = ["per hour", "per day"]
 
     var body: some View {
@@ -22,27 +20,41 @@ struct PriceScreen: View {
                 .font(.headline)
                 .frame(maxWidth: .infinity)
 
-            TextField("Purchase price", text: $price)
+            TextField("Purchase price", text: $viewModel.purchasePrice)
                 .textFieldStyle()
 
             Text("Rent")
 
-            TextField("Rent price", text: $rentPrice)
+            TextField("Rent price", text: $viewModel.rentPrice)
                 .textFieldStyle()
 
-            Picker("Select option", selection: $selectedRentalOption) {
+            Picker("Select option", selection: $viewModel.rentOption) {
                 ForEach(rentalOptions, id: \.self) {
                     Text($0)
                 }
             }
+
+            HStack {
+                Button {
+                    dismiss()
+                } label: {
+                    CustomButtonView(name: "BACK")
+                }
+
+                Spacer()
+
+                NavigationLink(destination: ProductSummaryScreen(viewModel: viewModel)) {
+                    CustomButtonView(name: "NEXT")
+                }
+            }
+            .padding(.horizontal, 40)
+
+            Spacer()
         }
         .padding(.horizontal, 40)
     }
 }
 
 #Preview {
-    PriceScreen(
-        price: "1000",
-        rentPrice: "100"
-    )
+    PriceScreen(viewModel: ProductCreationViewModel())
 }

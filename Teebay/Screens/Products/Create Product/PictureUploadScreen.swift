@@ -6,21 +6,25 @@
 //
 
 import SwiftUI
-import UIKit // Import UIKit for UIImage
+import UIKit
 
 struct PictureUploadScreen: View {
     @Environment(\.dismiss) var dismiss
 
+    @Bindable var viewModel: ProductCreationViewModel
+
     // MARK: - State Variables for Image Picking
+
     @State private var showingImagePicker: Bool = false
     @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
-    @State private var selectedImage: UIImage? // Holds the selected image
+    @State private var selectedImage: UIImage? 
 
     var body: some View {
         VStack(spacing: 32) {
             Spacer()
 
             // MARK: - Display Selected Image (Optional)
+
             if let image = selectedImage {
                 Image(uiImage: image)
                     .resizable()
@@ -36,6 +40,7 @@ struct PictureUploadScreen: View {
             }
 
             // MARK: - Take Picture Button
+
             Button {
                 self.sourceType = .camera
                 self.showingImagePicker = true
@@ -50,6 +55,7 @@ struct PictureUploadScreen: View {
             .disabled(!UIImagePickerController.isSourceTypeAvailable(.camera)) // Disable if camera is not available
 
             // MARK: - Upload Picture Button
+
             Button {
                 self.sourceType = .photoLibrary
                 self.showingImagePicker = true
@@ -66,6 +72,7 @@ struct PictureUploadScreen: View {
             Spacer()
 
             // MARK: - Navigation Buttons
+
             HStack {
                 Button {
                     dismiss()
@@ -75,18 +82,19 @@ struct PictureUploadScreen: View {
 
                 Spacer()
 
-                // Ensure an image is selected before enabling NEXT
-                NavigationLink(destination: PriceScreen()) {
+                NavigationLink(destination: PriceScreen(viewModel: viewModel)) {
                     CustomButtonView(name: "NEXT")
                 }
-                .disabled(selectedImage == nil) // Disable "NEXT" if no image is selected
+                .disabled(selectedImage == nil)
             }
             .padding(.horizontal, 40)
 
-            Spacer() // This spacer might push content unexpectedly, reconsider its placement
+            Spacer()
         }
         .padding(.horizontal, 40)
+
         // MARK: - Present Image Picker Sheet
+
         .sheet(isPresented: $showingImagePicker) {
             ImagePicker(sourceType: self.sourceType, selectedImage: $selectedImage)
         }
@@ -94,62 +102,7 @@ struct PictureUploadScreen: View {
 }
 
 #Preview {
-    NavigationView { // Required for NavigationLink to work in Preview
-        PictureUploadScreen()
+    NavigationView {
+        PictureUploadScreen(viewModel: ProductCreationViewModel())
     }
 }
-
-
-
-
-//struct PictureUploadScreen: View {
-//    @Environment(\.dismiss) var dismiss
-//
-//    var body: some View {
-//        VStack(spacing: 32) {
-//            Spacer()
-//            
-//            Button {} label: {
-//                Text("Take Picture using Camera")
-//                    .font(.headline)
-//                    .foregroundColor(.white)
-//                    .padding()
-//                    .background(Color.purple)
-//                    .cornerRadius(8)
-//            }
-//            
-//            Button {} label: {
-//                Text("Upload Picture from Device")
-//                    .font(.headline)
-//                    .foregroundColor(.white)
-//                    .padding()
-//                    .background(Color.purple)
-//                    .cornerRadius(8)
-//            }
-//            .padding(.bottom, 40)
-//            
-//            Spacer()
-//            
-//            HStack {
-//                Button {
-//                    dismiss()
-//                } label: {
-//                    CustomButtonView(name: "BACK")
-//                }
-//                
-//                Spacer()
-//                
-//                NavigationLink(destination: PriceScreen()) {
-//                    CustomButtonView(name: "NEXT")
-//                }
-//            }
-//            
-//            Spacer()
-//        }
-//        .padding(.horizontal, 40)
-//    }
-//}
-
-//#Preview {
-//    PictureUploadScreen()
-//}

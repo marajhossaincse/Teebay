@@ -10,7 +10,7 @@ import SwiftUI
 struct DescriptionScreen: View {
     @Environment(\.dismiss) var dismiss
 
-    @State var description: String = ""
+    @Bindable var viewModel: ProductCreationViewModel
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,7 +18,7 @@ struct DescriptionScreen: View {
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
-            TextEditor(text: $description)
+            TextEditor(text: $viewModel.description)
                 .frame(height: 200)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
@@ -35,7 +35,7 @@ struct DescriptionScreen: View {
 
                 Spacer()
 
-                NavigationLink(destination: PictureUploadScreen()) {
+                NavigationLink(destination: PictureUploadScreen(viewModel: viewModel)) {
                     CustomButtonView(name: "NEXT")
                 }
             }
@@ -45,5 +45,5 @@ struct DescriptionScreen: View {
 }
 
 #Preview {
-    DescriptionScreen()
+    DescriptionScreen(viewModel: ProductCreationViewModel())
 }

@@ -7,29 +7,22 @@
 
 import SwiftUI
 
-struct MultiSelectPickerView: View {
-    @State private var selectedCategories: Set<Category> = []
-
-    let allCategories: [Category] = [
-        Category(name: "ELECTRONICS"),
-        Category(name: "FURNITURE"),
-        Category(name: "HOME APPLIANCES"),
-        Category(name: "SPORTING GOODS"),
-        Category(name: "OUTDOOR"),
-        Category(name: "TOYS"),
-    ]
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            MultiSelectPicker(
-                selections: $selectedCategories,
-                options: allCategories,
-                title: "Select Categories",
-                placeholder: "Choose categories..."
-            )
-        }
-    }
-}
+//struct MultiSelectPickerView: View {
+//    @State private var selectedCategories: Set<Category> = []
+//
+//   
+//
+//    var body: some View {
+//        VStack(alignment: .leading, spacing: 20) {
+//            MultiSelectPicker(
+//                selections: $selectedCategories,
+//                options: allCategories,
+//                title: "Select Categories",
+//                placeholder: "Choose categories..."
+//            )
+//        }
+//    }
+//}
 
 struct MultiSelectPicker<Item: Identifiable & Hashable & CustomStringConvertible>: View {
     @Binding var selections: Set<Item>
@@ -137,8 +130,8 @@ struct Category: Identifiable, Hashable, CustomStringConvertible {
     }
 }
 
-#Preview {
-    NavigationView {
-        MultiSelectPickerView()
-    }
-}
+//#Preview {
+//    NavigationView {
+//        MultiSelectPickerView()
+//    }
+//}
