@@ -21,6 +21,8 @@
 		D95CA2A02DFAE2F80050ACAD /* BiometricItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */; };
 		D976B1512E01466200E214E7 /* MyProductsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D976B1502E01466100E214E7 /* MyProductsScreen.swift */; };
 		D97EBF112E02DE3900244E79 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97EBF102E02DE3900244E79 /* PhotoPicker.swift */; };
+		D99369F42E0682BC00BEC9D5 /* ProductCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99369F32E0682BC00BEC9D5 /* ProductCreationViewModel.swift */; };
+		D99369F62E0682E000BEC9D5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99369F52E0682E000BEC9D5 /* Product.swift */; };
 		D9B89F8B2E02CC4200232891 /* PriceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B89F8A2E02CC4200232891 /* PriceScreen.swift */; };
 		D9B89F8D2E02D08800232891 /* ProductSummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B89F8C2E02D08800232891 /* ProductSummaryScreen.swift */; };
 		D9B89F8F2E02D2C900232891 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B89F8E2E02D2C900232891 /* CustomButtonView.swift */; };
@@ -50,6 +52,8 @@
 		D95CA29F2DFAE2F80050ACAD /* BiometricItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricItem.swift; sourceTree = "<group>"; };
 		D976B1502E01466100E214E7 /* MyProductsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsScreen.swift; sourceTree = "<group>"; };
 		D97EBF102E02DE3900244E79 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		D99369F32E0682BC00BEC9D5 /* ProductCreationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCreationViewModel.swift; sourceTree = "<group>"; };
+		D99369F52E0682E000BEC9D5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D9B89F8A2E02CC4200232891 /* PriceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceScreen.swift; sourceTree = "<group>"; };
 		D9B89F8C2E02D08800232891 /* ProductSummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSummaryScreen.swift; sourceTree = "<group>"; };
 		D9B89F8E2E02D2C900232891 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D95A03412E03520A0008732F /* User.swift */,
+				D99369F52E0682E000BEC9D5 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				D95A03442E03533D0008732F /* UserRegistrationViewModel.swift */,
+				D99369F32E0682BC00BEC9D5 /* ProductCreationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				D95A03482E0355740008732F /* NetworkManager.swift in Sources */,
 				D97EBF112E02DE3900244E79 /* PhotoPicker.swift in Sources */,
 				D95A034A2E03559B0008732F /* RegistrationAPI.swift in Sources */,
+				D99369F62E0682E000BEC9D5 /* Product.swift in Sources */,
 				D9B89F8B2E02CC4200232891 /* PriceScreen.swift in Sources */,
 				D9BB85D32E017DCB006B9AB5 /* DescriptionScreen.swift in Sources */,
 				D9E723FF2DFAB33B0015CC76 /* CustomTextFieldModifier.swift in Sources */,
@@ -277,6 +284,7 @@
 				D9BB85CF2E014D14006B9AB5 /* CategoryScreen.swift in Sources */,
 				D9BB85D52E018DBA006B9AB5 /* PictureUploadScreen.swift in Sources */,
 				D9E723FD2DFAB1180015CC76 /* RegistrationScreen.swift in Sources */,
+				D99369F42E0682BC00BEC9D5 /* ProductCreationViewModel.swift in Sources */,
 				CE4D634B2DF9E6B100280979 /* LoginScreen.swift in Sources */,
 				D95CA2A02DFAE2F80050ACAD /* BiometricItem.swift in Sources */,
 				D9C1DCB92E0142B900D63AD7 /* ProductCard.swift in Sources */,

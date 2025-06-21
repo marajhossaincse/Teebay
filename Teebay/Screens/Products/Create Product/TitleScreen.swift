@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TitleScreen: View {
-    @State var title: String = ""
+    @State private var viewModel: ProductCreationViewModel = .init()
 
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -17,12 +17,12 @@ struct TitleScreen: View {
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
-                TextField("", text: $title)
+                TextField("", text: $viewModel.title)
                     .textFieldStyle()
             }
             .padding(.bottom, 80)
 
-            NavigationLink(destination: CategoryScreen()) {
+            NavigationLink(destination: CategoryScreen(viewModel: viewModel)) {
                 CustomButtonView(name: "NEXT")
             }
         }

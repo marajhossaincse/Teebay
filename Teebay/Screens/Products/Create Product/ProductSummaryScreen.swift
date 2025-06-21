@@ -10,6 +10,8 @@ import SwiftUI
 struct ProductSummaryScreen: View {
     @Environment(\.dismiss) var dismiss
 
+    @Bindable var viewModel: ProductCreationViewModel
+
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
@@ -17,17 +19,17 @@ struct ProductSummaryScreen: View {
             Text("Summary")
                 .font(.headline)
 
-            Text("Title: MacBook Pro")
+            Text("Title: \(viewModel.title)")
                 .padding(.vertical)
 
             Text("Categories:")
-            Text("cat 1, cat 2")
+            Text(viewModel.categories.isEmpty ? "No categories selected" : viewModel.categories.joined(separator: ", "))
 
-            Text("Description: Lorem ipsum")
+            Text("Description: \(viewModel.description)")
                 .padding(.vertical)
 
-            Text("Price: $5000")
-            Text("To rent: $50")
+            Text("Price: $\(viewModel.purchasePrice)")
+            Text("To rent: $\(viewModel.rentPrice)")
             Text("per day")
                 .padding(.bottom)
 
@@ -40,8 +42,10 @@ struct ProductSummaryScreen: View {
 
                 Spacer()
 
-                NavigationLink(destination: PriceScreen()) {
-                    CustomButtonView(name: "NEXT")
+                Button {
+                    // CALL POST API FOR CREATING PRODUCTS
+                } label: {
+                    CustomButtonView(name: "SUBMIT")
                 }
             }
 
@@ -52,5 +56,5 @@ struct ProductSummaryScreen: View {
 }
 
 #Preview {
-    ProductSummaryScreen()
+    ProductSummaryScreen(viewModel: ProductCreationViewModel())
 }
