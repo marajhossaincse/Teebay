@@ -9,12 +9,7 @@ import Foundation
 
 enum DataSource {
     static func request<T: Decodable>(api: API, type: T.Type) async throws -> T {
-        print("debug request")
-        print("api url", api.url)
-        print("api body", api.httpBody)
-        print("api method", api.httpMethod)
-        
-        guard let url = URL(string: "http://127.0.0.1:8000/api/users/register/") else {
+        guard let url = URL(string: api.url) else {
             throw URLError(.badURL)
         }
 
@@ -24,7 +19,7 @@ enum DataSource {
         // If the API case has an httpBody, encode it and set it
         if let body = api.httpBody {
             request.httpBody = try JSONEncoder().encode(body)
-         
+
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         }
 

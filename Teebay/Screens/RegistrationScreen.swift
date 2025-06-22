@@ -70,6 +70,6 @@ struct RegistrationScreen: View {
     }
 }
 
-// #Preview {
-//    RegistrationScreen()
-// }
+ #Preview {
+    RegistrationScreen()
+ }

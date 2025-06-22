@@ -7,17 +7,6 @@
 
 import Foundation
 
-/*
- {
-  "email": "user@example.com",
-  "first_name": "string",
-  "last_name": "string",
-  "address": "string",
-  "firebase_console_manager_token": "string",
-  "password": "string"
- }
- */
-
 struct UserSubmit: Codable {
     var email: String
     var firstName: String
@@ -51,19 +40,6 @@ struct UserSubmit: Codable {
         case password
     }
 }
-
-/*
-  {
-    "id": 0,
-    "email": "user@example.com",
-    "first_name": "string",
-    "last_name": "string",
-    "address": "string",
-    "firebase_console_manager_token": "string",
-    "password": "string",
-    "date_joined": "2025-06-18T20:49:12.256Z"
- }
-   */
 
 struct UserResponse: Identifiable, Codable {
     let id: Int

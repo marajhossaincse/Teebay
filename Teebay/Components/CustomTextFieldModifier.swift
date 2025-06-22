@@ -10,13 +10,9 @@ import SwiftUI
 struct TextFieldBorderAndBackground: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(10)
-            .foregroundColor(.black)
-            .background(.white)
-            .overlay(
-                Rectangle()
-                    .stroke(Color.gray, lineWidth: 1)
-            )
+            .padding()
+            .background(Color.gray.opacity(0.1))
+            .cornerRadius(10)
             .autocorrectionDisabled(true)
             .textInputAutocapitalization(.never)
     }

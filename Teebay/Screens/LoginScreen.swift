@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct LoginScreen: View {
-    @State var email: String = ""
-    @State var password: String = ""
+    @EnvironmentObject var userSessionManager: UserSessionManager
+    @StateObject private var viewModel: LoginViewModel
     @State private var showRegistrationScreen = false
+    
+    init(
+        userSessionManager: UserSessionManager
+    ) {
+        _viewModel = StateObject(wrappedValue: LoginViewModel(userSessionManager: userSessionManager))
+    }
     
     var body: some View {
         NavigationStack {
@@ -18,21 +24,41 @@ struct LoginScreen: View {
                 Spacer()
                 
                 Text("SIGN IN")
-                    .font(.title)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.bottom, 40)
+                    .foregroundColor(.purple)
                 
-                TextField("Email", text: $email)
+                TextField("Email", text: $viewModel.email)
                     .textFieldStyle()
                     
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $viewModel.password)
                     .textFieldStyle()
                 
-                NavigationLink(destination: TitleScreen()) {
-                    Text("LOGIN")
-                        .font(.headline)
-                        .padding()
-                        .background(Color.purple)
-                        .foregroundColor(.white)
+                Button {
+                    Task {
+                        await viewModel.login()
+                    }
+                } label: {
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.purple.opacity(0.8))
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    } else {
+                        Text("Login")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.purple)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
                 }
+                .disabled(viewModel.isLoading)
                 
                 BiometricItem()
                 
@@ -57,8 +83,5 @@ struct LoginScreen: View {
 }
 
 #Preview {
-    LoginScreen(
-        email: "",
-        password: ""
-    )
+    LoginScreen(userSessionManager: UserSessionManager())
 }
