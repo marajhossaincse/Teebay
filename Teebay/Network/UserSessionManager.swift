@@ -23,9 +23,6 @@ class UserSessionManager: ObservableObject {
                     // If Firebase user logs out, clear our custom backend user too
                     self?.currentUser = nil
                 }
-                // Note: If you want currentUser to be populated from Firebase display name/email
-                // you would do it here using `user` object.
-                // For now, we rely on the backend login to set `currentUser`.
             }
         }
     }

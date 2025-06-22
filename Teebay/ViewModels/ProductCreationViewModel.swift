@@ -20,17 +20,4 @@ class ProductCreationViewModel {
     var rentPrice: String = ""
     var rentOption: String = ""
     var datePosted: String = ""
-
-//    let product = Product(
-//        id: id,
-//        seller: seller,
-//        title: title,
-//        description: description,
-//        categories: categories,
-//        productImage: productImage,
-//        purchasePrice: purchasePrice,
-//        rentPrice: rentPrice,
-//        rentOption: rentOption,
-//        datePosted: datePosted
-//    )
 }
