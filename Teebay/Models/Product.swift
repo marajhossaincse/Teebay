@@ -7,24 +7,7 @@
 
 import Foundation
 
-/*
- {
-     "id": 2,
-     "seller": 1,
-     "title": "Product 2",
-     "description": "This is product 2",
-     "categories": [
-       "electronics"
-     ],
-     "product_image": "http://127.0.0.1:8000/media/product_images/Mac_UlQfRJT.jpeg",
-     "purchase_price": "1000.00",
-     "rent_price": "100.00",
-     "rent_option": "hour",
-     "date_posted": "2025-06-20T19:20:48.954609Z"
-   }
- */
-
-struct Product: Codable {
+struct Product: Hashable, Codable {
     let id: Int
     let seller: Int
     let title: String

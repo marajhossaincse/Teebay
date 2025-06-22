@@ -12,6 +12,9 @@
 		CE4D63412DF9E66C00280979 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D63402DF9E66C00280979 /* Assets.xcassets */; };
 		CE4D63442DF9E66C00280979 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D63432DF9E66C00280979 /* Preview Assets.xcassets */; };
 		CE4D634B2DF9E6B100280979 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D634A2DF9E6B100280979 /* LoginScreen.swift */; };
+		D90C8D9D2E08108E00E703E1 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C8D9C2E08108E00E703E1 /* ProductsViewModel.swift */; };
+		D90C8D9F2E08115800E703E1 /* ProductsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C8D9E2E08115800E703E1 /* ProductsAPI.swift */; };
+		D90C8DA12E08124B00E703E1 /* AllProductsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C8DA02E08124B00E703E1 /* AllProductsScreen.swift */; };
 		D919CD802E0149CC00F60824 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D919CD7F2E0149CC00F60824 /* TitleScreen.swift */; };
 		D9490FCC2E07DFA1005B8882 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9490FCB2E07DFA1005B8882 /* GoogleService-Info.plist */; };
 		D9490FCF2E07DFF0005B8882 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D9490FCE2E07DFF0005B8882 /* FirebaseAuth */; };
@@ -51,6 +54,9 @@
 		CE4D63402DF9E66C00280979 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4D63432DF9E66C00280979 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE4D634A2DF9E6B100280979 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		D90C8D9C2E08108E00E703E1 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		D90C8D9E2E08115800E703E1 /* ProductsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAPI.swift; sourceTree = "<group>"; };
+		D90C8DA02E08124B00E703E1 /* AllProductsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProductsScreen.swift; sourceTree = "<group>"; };
 		D919CD7F2E0149CC00F60824 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		D9490FCB2E07DFA1005B8882 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9490FD22E07E11A005B8882 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 				D9490FDA2E07E53A005B8882 /* LoginViewModel.swift */,
 				D95A03442E03533D0008732F /* UserRegistrationViewModel.swift */,
 				D99369F32E0682BC00BEC9D5 /* ProductCreationViewModel.swift */,
+				D90C8D9C2E08108E00E703E1 /* ProductsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 				D9490FD42E07E229005B8882 /* LoginAPI.swift */,
 				D9490FD62E07E392005B8882 /* AuthenticationService.swift */,
 				D9490FD82E07E439005B8882 /* UserSessionManager.swift */,
+				D90C8D9E2E08115800E703E1 /* ProductsAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 				D9C1DCB82E0142B900D63AD7 /* ProductCard.swift */,
 				D976B1502E01466100E214E7 /* MyProductsScreen.swift */,
 				D919CD7E2E01499100F60824 /* Create Product */,
+				D90C8DA02E08124B00E703E1 /* AllProductsScreen.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -302,6 +311,7 @@
 				D95A034A2E03559B0008732F /* RegistrationAPI.swift in Sources */,
 				D99369F62E0682E000BEC9D5 /* Product.swift in Sources */,
 				D9B89F8B2E02CC4200232891 /* PriceScreen.swift in Sources */,
+				D90C8D9D2E08108E00E703E1 /* ProductsViewModel.swift in Sources */,
 				D9BB85D32E017DCB006B9AB5 /* DescriptionScreen.swift in Sources */,
 				D9E723FF2DFAB33B0015CC76 /* CustomTextFieldModifier.swift in Sources */,
 				D9B89F8D2E02D08800232891 /* ProductSummaryScreen.swift in Sources */,
@@ -315,9 +325,11 @@
 				D9E723FD2DFAB1180015CC76 /* RegistrationScreen.swift in Sources */,
 				D9490FD32E07E11A005B8882 /* UserLogin.swift in Sources */,
 				D99369F42E0682BC00BEC9D5 /* ProductCreationViewModel.swift in Sources */,
+				D90C8D9F2E08115800E703E1 /* ProductsAPI.swift in Sources */,
 				CE4D634B2DF9E6B100280979 /* LoginScreen.swift in Sources */,
 				D95CA2A02DFAE2F80050ACAD /* BiometricItem.swift in Sources */,
 				D9C1DCB92E0142B900D63AD7 /* ProductCard.swift in Sources */,
+				D90C8DA12E08124B00E703E1 /* AllProductsScreen.swift in Sources */,
 				D95A03422E03520A0008732F /* User.swift in Sources */,
 				D9490FD72E07E392005B8882 /* AuthenticationService.swift in Sources */,
 			);
