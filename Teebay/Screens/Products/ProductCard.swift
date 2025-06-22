@@ -7,25 +7,33 @@
 
 import SwiftUI
 
-struct ProductCard: View {    
+struct ProductCard: View {
+    var title: String
+    var categories: [String]
+    var purchasePrice: String
+    var rentPrice: String
+    var rentOption: String
+    var description: String
+    var datePosted: String
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Title")
+            Text(title)
                 .font(.title2)
             
-            Text("Categories: Lorem, Ipsum")
+            Text("Categories: \(categories)")
                 .font(.callout)
                 .foregroundStyle(.gray)
             
-            Text("Price: $500 | Rent: $100 daily")
+            Text("Price: $\(purchasePrice) | Rent: $\(rentPrice) \(rentOption)")
                 .font(.callout)
                 .foregroundStyle(.gray)
             
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium arcu ipsum, ac aliquam dui sagittis eu. Curabitur suscipit enim.")
+            Text(description)
                 .font(.callout)
             
             HStack {
-                Text("Date posted: 21st August 2020")
+                Text("Date posted: \(datePosted)")
                 
                 Spacer()
                 
@@ -41,5 +49,13 @@ struct ProductCard: View {
 }
 
 #Preview {
-    ProductCard()
+    ProductCard(
+        title: "",
+        categories: [],
+        purchasePrice: "",
+        rentPrice: "",
+        rentOption: "",
+        description: "",
+        datePosted: ""
+    )
 }

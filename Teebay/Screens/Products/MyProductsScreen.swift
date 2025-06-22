@@ -12,9 +12,9 @@ struct MyProductsScreen: View {
         ScrollView {
             ZStack(alignment: .bottomTrailing) {
                 VStack(spacing: 8) {
-                    ProductCard()
-
-                    ProductCard()
+//                    ProductCard()
+//
+//                    ProductCard()
 
                     Spacer()
                 }
