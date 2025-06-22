@@ -24,7 +24,10 @@ struct LoginScreen: View {
                 Spacer()
                 
                 Text("SIGN IN")
-                    .font(.title)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.bottom, 40)
+                    .foregroundColor(.purple)
                 
                 TextField("Email", text: $viewModel.email)
                     .textFieldStyle()
@@ -42,7 +45,7 @@ struct LoginScreen: View {
                             .progressViewStyle(CircularProgressViewStyle(tint: .white))
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.green.opacity(0.8))
+                            .background(Color.purple.opacity(0.8))
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     } else {
@@ -50,20 +53,12 @@ struct LoginScreen: View {
                             .font(.headline)
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.green)
+                            .background(Color.purple)
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
                 }
                 .disabled(viewModel.isLoading)
-                
-//                NavigationLink(destination: TitleScreen()) {
-//                    Text("LOGIN")
-//                        .font(.headline)
-//                        .padding()
-//                        .background(Color.purple)
-//                        .foregroundColor(.white)
-//                }
                 
                 BiometricItem()
                 

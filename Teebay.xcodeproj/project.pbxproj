@@ -163,9 +163,9 @@
 		D95A03432E0353230008732F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D9490FDA2E07E53A005B8882 /* LoginViewModel.swift */,
 				D95A03442E03533D0008732F /* UserRegistrationViewModel.swift */,
 				D99369F32E0682BC00BEC9D5 /* ProductCreationViewModel.swift */,
-				D9490FDA2E07E53A005B8882 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

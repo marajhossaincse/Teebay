@@ -17,9 +17,10 @@ class LoginViewModel: ObservableObject {
     private let authService: AuthenticationService
     private let userSessionManager: UserSessionManager
 
-    init(authService: AuthenticationService = AuthenticationService(),
-         userSessionManager: UserSessionManager)
-    {
+    init(
+        authService: AuthenticationService = AuthenticationService(),
+        userSessionManager: UserSessionManager
+    ) {
         self.authService = authService
         self.userSessionManager = userSessionManager
     }
@@ -32,9 +33,11 @@ class LoginViewModel: ObservableObject {
             let loggedInUser = try await authService.loginUser(email: email, password: password)
             userSessionManager.setUserSession(user: loggedInUser) // Store the user in session manager
             print("Login successful for user: \(loggedInUser.email)")
+
         } catch let authError as AuthenticationError {
             errorMessage = authError.localizedDescription
             print("Login failed: \(authError.localizedDescription)")
+
         } catch {
             errorMessage = "An unexpected error occurred during login."
             print("Login failed with unknown error: \(error.localizedDescription)")
