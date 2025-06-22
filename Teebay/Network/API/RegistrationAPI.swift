@@ -8,7 +8,7 @@
 import Foundation
 
 enum RegistrationAPI: API {
-    case register(user: UserSubmit)
+    case register(user: UserRegistrationRequest)
 
     private var localUrl: String {
         switch self {

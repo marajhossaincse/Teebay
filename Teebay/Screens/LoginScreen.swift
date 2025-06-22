@@ -19,66 +19,68 @@ struct LoginScreen: View {
     }
     
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 28) {
-                Spacer()
+        VStack(spacing: 28) {
+            Spacer()
                 
-                Text("SIGN IN")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.bottom, 40)
-                    .foregroundColor(.purple)
+            Text("SIGN IN")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding(.bottom, 40)
+                .foregroundColor(.purple)
                 
-                TextField("Email", text: $viewModel.email)
-                    .textFieldStyle()
+            TextField("Email", text: $viewModel.email)
+                .textFieldStyle()
                     
-                SecureField("Password", text: $viewModel.password)
-                    .textFieldStyle()
+            SecureField("Password", text: $viewModel.password)
+                .textFieldStyle()
                 
-                Button {
-                    Task {
-                        await viewModel.login()
-                    }
-                } label: {
-                    if viewModel.isLoading {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.purple.opacity(0.8))
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    } else {
-                        Text("Login")
-                            .font(.headline)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Color.purple)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
+            Button {
+                Task {
+                    await viewModel.login()
                 }
-                .disabled(viewModel.isLoading)
+            } label: {
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.purple.opacity(0.8))
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                } else {
+                    Text("Login")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.purple)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+            }
+            .disabled(viewModel.isLoading)
                 
-                BiometricItem()
+            BiometricItem()
                 
-                HStack {
-                    Text("Don't have an account?")
+            HStack {
+                Text("Don't have an account?")
                     
-                    Button {
-                        showRegistrationScreen = true
-                    } label: {
-                        Text("Sign Up")
-                    }
+                NavigationLink(destination: RegistrationScreen()) {
+                    Text("Sign Up")
                 }
+                
+//                Button {
+//                    showRegistrationScreen = true
+//                } label: {
+//                    
+//                }
+            }
         
-                Spacer()
-            }
-            .padding(.horizontal, 40)
-            .navigationDestination(isPresented: $showRegistrationScreen) {
-                RegistrationScreen()
-            }
+            Spacer()
         }
+        .padding(.horizontal, 40)
+//        .navigationDestination(isPresented: $showRegistrationScreen) {
+//            RegistrationScreen()
+//        }
     }
 }
 

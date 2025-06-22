@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 class ProductsViewModel: ObservableObject {
-    @Published var products: [Product] = []
+    @Published var products: [ProductResponse] = []
     @Published var errorMessage: String? = nil
     @Published var isLoading = false
 
@@ -18,7 +18,7 @@ class ProductsViewModel: ObservableObject {
         errorMessage = nil
 
         do {
-            let result = try await DataSource.request(api: ProductsAPI.getProducts, type: [Product].self)
+            let result = try await DataSource.request(api: ProductsAPI.getProducts, type: [ProductResponse].self)
 
             products = result
         } catch {

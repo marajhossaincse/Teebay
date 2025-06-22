@@ -8,18 +8,16 @@
 import Foundation
 
 @MainActor
-@Observable
-class UserRegistrationViewModel {
-    var firstName: String = "Lorem"
-    var lastName: String = "Lorem"
-    var address: String = "Lorem"
-    var email: String = "Lorem@somemail.com"
-    var password: String = "Lorem"
-    var confirmPassword: String = "Lorem"
+class UserRegistrationViewModel: ObservableObject {
+   @Published var firstName: String = ""
+   @Published var lastName: String = ""
+   @Published var address: String = ""
+   @Published var email: String = ""
+   @Published var password: String = ""
+   @Published var confirmPassword: String = ""
 
     func registerUser() async {
-        print("debug in register user function")
-        let user = UserSubmit(
+        let user = UserRegistrationRequest(
             email: email,
             firstName: firstName,
             lastName: lastName,
@@ -29,8 +27,7 @@ class UserRegistrationViewModel {
         )
 
         do {
-            print("debug do")
-            let result = try await DataSource.request(api: RegistrationAPI.register(user: user), type: UserResponse.self)
+            let result = try await DataSource.request(api: RegistrationAPI.register(user: user), type: UserRegistrationResponse.self)
 
             print("\(result)")
         } catch {

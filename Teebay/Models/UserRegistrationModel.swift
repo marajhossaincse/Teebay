@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserSubmit: Codable {
+struct UserRegistrationRequest: Codable {
     var email: String
     var firstName: String
     var lastName: String
@@ -41,7 +41,7 @@ struct UserSubmit: Codable {
     }
 }
 
-struct UserResponse: Identifiable, Codable {
+struct UserRegistrationResponse: Identifiable, Codable {
     let id: Int
     var email: String
     var firstName: String
